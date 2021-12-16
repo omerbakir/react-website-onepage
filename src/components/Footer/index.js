@@ -15,8 +15,15 @@ import {
     WebsiteRights
 } from "./FooterElements";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from "react-icons/all";
+import { animateScroll as scroll } from "react-scroll";
 
 const Footer = () => {
+
+
+    const toogleHome = () => {
+        scroll.scrollToTop();
+    }
+
     return (
         <FooterContainer>
             <FooterWrap>
@@ -60,7 +67,7 @@ const Footer = () => {
                 </FooterLinksContainer>
                 <SocialMedia>
                     <SocialMediaWrap>
-                        <SocialLogo to="/">Omer</SocialLogo>
+                        <SocialLogo to="/" onClick={toogleHome}>Omer</SocialLogo>
                         <WebsiteRights>Omer © {new Date().getFullYear()} All rights reserved</WebsiteRights>
                         <SocialIcons>
                             <SocialIconLink href="/" target="_blank" aria-label="Facebook">
